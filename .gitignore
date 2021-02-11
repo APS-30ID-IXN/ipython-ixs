@@ -130,3 +130,6 @@ dmypy.json
 
 # IPython history
 history.sqlite
+
+# Bluesky session logging
+.logs/
