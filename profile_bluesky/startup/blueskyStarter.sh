@@ -1,11 +1,11 @@
 #!/bin/bash
 
-export CONDA_ACTIVATE=${HOME}/Apps/anaconda/bin/activate
-export CONDA_ENVIRONMENT=bluesky_2020_5
+export CONDA_ACTIVATE=/APSshare/miniconda/x86_64/bin/activate
+export CONDA_ENVIRONMENT=bluesky_2021_1
 # bluesky
 
 export IPYTHON_PROFILE=bluesky
-export IPYTHONDIR=~/.ipython
+export IPYTHONDIR=~/.ipython-bluesky
 
 export OPTIONS=""
 export OPTIONS="${OPTIONS} --profile=${IPYTHON_PROFILE}"
