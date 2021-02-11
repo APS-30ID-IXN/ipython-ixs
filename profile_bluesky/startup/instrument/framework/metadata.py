@@ -26,8 +26,10 @@ from .initialize import RE
 
 # Set up default metadata
 
-RE.md['beamline_id'] = 'APS lesson'
-RE.md['proposal_id'] = 'testing'
+# TODO: apply instrument name to beamline_id here
+bl_name = "herix"
+RE.md['beamline_id'] = f'30-ID{bl_name}'
+RE.md['proposal_id'] = 'commissioning'
 RE.md['pid'] = os.getpid()
 
 HOSTNAME = socket.gethostname() or 'localhost' 
@@ -40,6 +42,7 @@ versions = dict(
     bluesky = bluesky.__version__,
     databroker = databroker.__version__,
     epics = epics.__version__,
+    h5py = h5py.__version__,
     matplotlib = matplotlib.__version__,
     numpy = numpy.__version__,
     ophyd = ophyd.__version__,
