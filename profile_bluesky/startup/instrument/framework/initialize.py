@@ -64,9 +64,7 @@ def get_md_path():
 old_md = None
 md_path = get_md_path()
 if not os.path.exists(md_path):
-    logger.info(
-        "New directory to store RE.md between sessions: %s", md_path
-    )
+    logger.info("New directory to store RE.md between sessions: %s", md_path)
     os.makedirs(md_path)
     from bluesky.utils import get_history
 
@@ -122,8 +120,5 @@ bec.disable_baseline()
 
 # set default timeout for all EpicsSignal connections & communications
 EpicsSignalBase.set_defaults(
-    auto_monitor=True,
-    timeout=60,
-    write_timeout=60,
-    connection_timeout=5,
+    auto_monitor=True, timeout=60, write_timeout=60, connection_timeout=5,
 )
